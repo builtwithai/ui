@@ -1,0 +1,22 @@
+# This workflow triggers a serverless function when an issue is created or updated
+name: Notes
+on:
+  issues:
+    types: [opened, edited]
+jobs:
+  function:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run function
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const functionPath = path.join(process.env.GITHUB_WORKSPACE, '.github', 'workflows', 'function.js');
+            const functionCode = fs.readFileSync(functionPath, 'utf8');
+            eval(functionCode);
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          user-agent: Notes
+          input: ${{toJson(github.event.issue)}}
