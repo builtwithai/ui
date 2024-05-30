@@ -19,12 +19,15 @@ body {
   padding: 1rem;
 }
 
-/* Add some custom styles for the notes grid */
+/* Custom styles complementing Primer components */
+/* Note: These styles are designed to complement Primer components without overriding essential styles. */
+
+/* Custom styles for the notes grid */
 #notes-grid {
   gap: 1rem;
 }
 
-/* Add some custom styles for the notes */
+/* Custom styles for the notes */
 .note {
   width: 300px;
   height: 300px;
@@ -34,7 +37,7 @@ body {
   overflow: auto;
 }
 
-/* Add some custom styles for the note header */
+/* Custom styles for the note header */
 .note-header {
   display: flex;
   align-items: center;
@@ -42,13 +45,13 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Add some custom styles for the note title */
+/* Custom styles for the note title */
 .note-title {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-/* Add some custom styles for the note priority */
+/* Custom styles for the note priority */
 .note-priority {
   display: inline-block;
   padding: 0.2rem 0.4rem;
@@ -57,7 +60,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* Add some custom styles for the note priority colors */
+/* Custom styles for the note priority colors */
 .note-priority-low {
   background-color: #6f42c1;
 }
@@ -70,7 +73,7 @@ body {
   background-color: #d73a49;
 }
 
-/* Add some custom styles for the note due date */
+/* Custom styles for the note due date */
 .note-due {
   display: inline-block;
   padding: 0.2rem 0.4rem;
@@ -80,12 +83,12 @@ body {
   font-size: 0.8rem;
 }
 
-/* Add some custom styles for the note content */
+/* Custom styles for the note content */
 .note-content {
   font-size: 0.9rem;
 }
 
-/* Add some custom styles for the note footer */
+/* Custom styles for the note footer */
 .note-footer {
   display: flex;
   align-items: center;
@@ -93,13 +96,13 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Add some custom styles for the note issue number */
+/* Custom styles for the note issue number */
 .note-issue-number {
   color: #586069;
   font-size: 0.8rem;
 }
 
-/* Add some custom styles for the note issue link */
+/* Custom styles for the note issue link */
 .note-issue-link {
   color: #0366d6;
   font-size: 0.8rem;

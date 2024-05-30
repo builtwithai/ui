@@ -1,4 +1,4 @@
-// This is the serverless function code to parse the issue data and update the ui
+// This is the serverless function code to parse the issue data and update the UI using GitHub Primer components for improved accessibility and responsiveness
 const fs = require('fs')
 const path = require('path')
 const marked = require('marked')
@@ -18,7 +18,7 @@ const noteIssueLink = issue.html_url
 // Format the note content using markdown
 const noteHtml = marked(noteContent)
 
-// Create the note element using primer components
+// Create the note element using primer components for consistent UI and enhanced accessibility
 const noteElement = `
 <div class="Box Box--condensed d-flex flex-column flex-items-start p-3 mb-3" data-priority="${notePriority}" data-due="${noteDueDate}">
   <div class="d-flex flex-items-center flex-justify-between width-full">
@@ -35,7 +35,7 @@ const noteElement = `
 </div>
 `
 
-// Update the ui by appending or replacing the note element in the index.html file
+// Update the UI by appending or replacing the note element in the index.html file
 const indexFile = path.join(__dirname, '..', '..', 'index.html')
 const indexHtml = fs.readFileSync(indexFile, 'utf8')
 const notesContainer = indexHtml.match(/<div id="notes-container">([\s\S]*?)<\/div>/)?.[1] || ''
