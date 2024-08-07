@@ -2,6 +2,7 @@
 // Format the notes using markdown and show the priority, due date, title, issue number, and issue link
 // Sort the notes by priority and due date in a grid
 // Note: This script utilizes GitHub's Primer components for dynamically generated content to ensure improved accessibility and responsiveness.
+import { marked } from 'marked';
 
 // Get the notes grid element
 const notesGrid = document.getElementById("notes-grid");
